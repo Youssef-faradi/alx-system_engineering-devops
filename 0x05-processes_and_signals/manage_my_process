@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script listen for different SIG signals.
+
+FILE_PATH=/tmp/my_process
+while true; do
+	echo "I am alive!" >>$FILE_PATH
+	sleep 1
+done
