@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# This script listen for different SIG signals.
+
+pid_file=/var/run/myscript.pid
+
+clean_up(){
+	rm -f $pid_file
+	exit 1
+}
+
+handle_sigterm(){
+	echo 'I hate the kill command'
+	clean_up
+}
+
+trap 'clean_up' SIGQUIT
+
+trap 'handle_sigterm' SIGTERM
+
+trap "{ echo 'Y U no love me?!'; }" SIGINT
+
+
+echo $$ > $pid_file
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
