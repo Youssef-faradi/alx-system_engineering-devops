@@ -14,3 +14,4 @@ else
     print_info "web-01.$1" "web-01"
     print_info "web-02.$1" "web-02"
 fi
+
