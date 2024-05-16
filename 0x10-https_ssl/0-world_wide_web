@@ -16,3 +16,4 @@ else
         get_info "${sub}.$1" "$sub"
     done
 fi
+
