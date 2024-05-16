@@ -46,3 +46,4 @@ backend mybackend
     balance roundrobin
     server 429606-web-01 52.87.255.164:80 check
     server 429606-web-02 18.204.11.196:80 check
+	
